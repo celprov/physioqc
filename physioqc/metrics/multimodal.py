@@ -7,13 +7,30 @@ from scipy.misc import derivative
 from .utils import physio_or_numpy
 
 
+def signal(signal):
+    """
+    Wrapper that turns the object into a function for loop
+
+    Parameters
+    ----------
+    signal : np.array or peakdet Physio object
+        Physiological data
+
+    Returns
+    -------
+    signal : np.array or peakdet Physio object
+        Physiological data
+    """
+    return signal
+
+
 def std(signal):
     """
     Calculate standard deviation across input channels of signal.
 
     Parameters
     ----------
-    signal : np.array
+    signal : np.array or peakdet Physio object
         Physiological data
 
     Returns
@@ -32,7 +49,7 @@ def mean(signal: np.array):
 
     Parameters
     ----------
-    signal : np.array
+    signal : np.array or peakdet Physio object
         Physiological data
 
     Returns
@@ -51,7 +68,7 @@ def tSNR(signal):
 
     Parameters
     ----------
-    signal : np.array
+    signal : np.array or peakdet Physio object
         Physiological data
 
     Returns
@@ -70,7 +87,7 @@ def CoV(signal):
 
     Parameters
     ----------
-    signal : np.array
+    signal : np.array or peakdet Physio object
         Physiological data
 
     Returns
@@ -89,7 +106,7 @@ def min(signal: np.array):
 
     Parameters
     ----------
-    signal : np.array
+    signal : np.array or peakdet Physio object
         Physiological data
 
     Returns
@@ -108,7 +125,7 @@ def max(signal: np.array):
 
     Parameters
     ----------
-    signal : np.array
+    signal : np.array or peakdet Physio object
         Physiological data
 
     Returns
