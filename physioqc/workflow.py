@@ -3,8 +3,8 @@ import os
 import sys
 
 from physioqc.cli.run import _get_parser
-from physioqc.interfaces import generate_figures, run_metrics, save_metrics
-from physioqc.interfaces.visualizations import (
+from physioqc.interfaces.interfaces import generate_figures, run_metrics, save_metrics
+from physioqc.interfaces.interfaces.visualizations import (
     plot_average_peak,
     plot_histogram,
     plot_power_spectrum,

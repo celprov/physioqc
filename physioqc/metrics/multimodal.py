@@ -306,7 +306,7 @@ def energy(data, lowf=None, highf=None):
     return energy
 
 
-def fALFF(data, lowf, highf):
+def fALFF(data, lowf=0, highf=0.5):
     """
     Calculate the fractional amplitude of low-frequency fluctuations (fALFF).
 
@@ -326,6 +326,10 @@ def fALFF(data, lowf, highf):
     -------
     Float :obj:`numpy.ndarray`
         fALFF
+
+    Note
+    -------
+    The default value of lowf and highf were set randomly. Please update them with more meaningful value
     """
     # Extract energy in the frequency band
     band_energy = energy(data.data, lowf=lowf, highf=highf)
