@@ -22,7 +22,6 @@ from physioqc.metrics.multimodal import (
     peak_amplitude,
     peak_distance,
     signal,
-    smoothness,
     std,
 )
 
@@ -68,7 +67,7 @@ def physioqc(
     """
     # Define which metrics you want to compute on which physiological signal instance
     metrics = {
-        signal: [fALFF, freq_energy, smoothness],
+        signal: [fALFF, freq_energy],
         peak_distance: [min, max, std, mean],
         peak_amplitude: [min, max, std, mean],
     }
